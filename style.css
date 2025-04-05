@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffdbe6;
+    text-align: center;
+    color:black;
+    overflow: hidden;
+    padding-bottom: 50px;
+ }
+
+ .top-section {
+    padding: 40px 20px;
+ }
+
+ .collage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+ }
+
+ .collage img {
+    width: 30vw;
+    max-width: 120px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+ }
+
+ .love-counter {
+    margin: 40px 20px;
+    font-size: 22px;
+ }
+
+ .music-section {
+    margin: 30px 20px;
+ }
+
+ .letter-section {
+    margin: 40px 20px;
+ }
+
+ #loveButton {
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3;
+ }
+
+ #loveButton:hover {
+    background-color: #ff1e4a;
+ }
+
+ #loveLetter {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+ }
+
+ #loveLetter p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.5;
+ }
+
+ @media (max-width: 600px) {
+    .collage img {
+        width: 40vw;
+        max-width: 100px;
+    }
+
+    .love-counter {
+        font-size: 18px;
+    }
+
+    #loveButton {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    #loveLetter p {
+        font-size: 16px;
+    }
+ }
+
+ html, body {
+    overflow: auto !important;
+ }
+
+ .heart {
+    position: fixed;
+    top: -10px;
+    font-size: 20px;
+    color: red;
+    animation: fall linear infinite;
+    z-index: 9999;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
